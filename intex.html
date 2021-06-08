@@ -10,13 +10,21 @@
              <p>1</p>
         </div>
     {{ message }}
-    </div>
 
+    <ul class="column" v-for="column in column" >
+        <li class="cell" v-for="rows in rows">
+            <div>{{ column }},{{ rows }}</div>
+        </li>
+    </ul>
+    </div> 
+    
     <script>
     var app = new Vue({
         el: '#app',
         data: {
             message: 'Powodzenia'
+            rows: 10,
+            column: 10,
         }
     })
     </script>
